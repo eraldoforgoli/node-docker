@@ -6,8 +6,9 @@
 
 ### Step 2: Build an image of the Dockerfile located in the root of this repo
 ```docker build -t node-docker-test . ```  
+
 *the . in the end of the command above represents the path of the Dockerfile, currently . because i am running the docker 
-command in the location where the git repository is cloned*  
+command in the location where the git repository is located*  
 
 ### Step 3: Run an instance of this image
 ``` docker run -d -p 8085:8000 node-docker-test```  
