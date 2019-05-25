@@ -13,5 +13,7 @@ command in the location where the git repository is cloned*
 ``` docker run -d -p 8085:8000 node-docker-test```  
 
 *-d stands for detached mode  
--p stand for port binding, bind the 8085 port in your local machine/server to port 8000 that docker exposes.*  
+-p stand for port binding, bind the 8085 port in your local machine/server to port 8000 that docker exposes.* 
+
+If you open localhost:8085 in your browser, you should see the app running.
 
