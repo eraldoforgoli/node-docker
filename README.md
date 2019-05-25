@@ -8,7 +8,7 @@
 ```docker build -t node-docker-test . ```  
 
 *the . in the end of the command above represents the path of the Dockerfile, currently . because i am running the docker 
-command in the location where the git repository is located*  
+command in the location of git repository*  
 
 ### Step 3: Run an instance of this image
 ``` docker run -d -p 8085:8000 node-docker-test```  
