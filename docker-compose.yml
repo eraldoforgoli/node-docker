@@ -1,0 +1,19 @@
+version: "3"
+services:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: eraldoforgoli/node-docker-test
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: 200M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8083:8000"
+    networks:
+      - webnet
+networks:
+  webnet:
