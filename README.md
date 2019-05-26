@@ -97,3 +97,9 @@ ID                  NAME                         MODE                REPLICAS   
 dmy3gw1s2rgt        node-docker-test-swarm_web   replicated          5/5                 eraldoforgoli/node-docker-test:latest   *:8083->8000/tcp
 
 ```
+### Check if your containers are up and running
+Don't wanste time opening your browser and typing http://localhost:8083, just *curl it*
+```
+curl http://localhost:8083
+```
+You should receive a Hello World! message.
