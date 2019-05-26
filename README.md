@@ -68,7 +68,7 @@ Immediately restart containers if one fails.
 ```
 
 If you take a look at Dockerfile, you can see that i have EXPOSED port 8000, so i am mapping port 8083 to port 8000.
-Instruct web’s containers to share port 80 via a load-balanced network called webnet
+Instruct web’s containers to share port 8000 via a load-balanced network called webnet
 ```
     ports:
       - "8083:8000"
