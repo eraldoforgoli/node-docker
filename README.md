@@ -1,6 +1,5 @@
-
-### Getting started with docker
-Before applying the following steps, make sure you have docker installed in you machine/server.
+### Dockerizing a node.js app
+Before applying the following steps, make sure you have docker installed in you computer/server.
 
 #### Step 1: Clone repo
 ``` git clone https://github.com/eraldoforgoli/node-docker-test.git ```
