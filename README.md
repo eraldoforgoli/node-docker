@@ -102,4 +102,4 @@ Don't wanste time opening your browser and typing http://localhost:8083, just *c
 ```
 curl http://localhost:8083
 ```
-You should receive a Hello World! message.
+You should receive a "Hello World!" message.
