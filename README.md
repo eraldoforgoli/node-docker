@@ -44,6 +44,8 @@ networks:
   webnet:
 
 ```
+## This docker-compose.yml file tells Docker to do the following:
+
 I have pushed my image in Docker Hub (image cloud based repository), so it can be downloaded by swarm (as specified in the file above)
 
 ```
