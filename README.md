@@ -1,16 +1,17 @@
 
-**If you want to test Docker in your local environment, you need to have Docker installed.**
+### Getting started with docker
+Before applying the following steps, make sure you have docker installed in you machine/server.
 
-### Step 1: Clone repo
+#### Step 1: Clone repo
 ``` git clone https://github.com/eraldoforgoli/node-docker-test.git ```
 
-### Step 2: Build an image of the Dockerfile located in the root of this repo
+#### Step 2: Build an image of the Dockerfile located in the root of this repo
 ```docker build -t node-docker-test . ```  
 
 *the . in the end of the command above represents the path of the Dockerfile, currently . because i am running the docker 
 command in the location of git repository*  
 
-### Step 3: Run an instance of this image
+#### Step 3: Run an instance of this image
 ``` docker run -d -p 8085:8000 node-docker-test```  
 
 *-d stands for detached mode  
@@ -18,7 +19,7 @@ command in the location of git repository*
 
 If you open localhost:8085 in your browser, you should see the app running.
 
-#### Using Services to enable load-balancing  
+### Using Services to enable load-balancing  
 
 A docker-compose.yml file is a YAML file that defines how Docker containers should behave in production.
 ```
@@ -75,21 +76,21 @@ Instruct web’s containers to share port 80 via a load-balanced network called 
 
 After adding this file in the root directory, you can run your load balanced app
 
-1. Initialize docker swarm
+#### 1. Initialize docker swarm
 
 ```
 docker swarm init
 ```
-2. Run the app
+#### 2. Run the app
 ```
 docker stack deploy -c docker-compose.yml node-docker-test-swarm
 
 ```
-3. Take a look if your replicas have started
+#### 3. Take a look if your replicas have started
 ```
 docker service ls
 ```
-You should see something similar to this:
+#### You should see something similar to this:
 ```
 ID                  NAME                         MODE                REPLICAS            IMAGE                                   PORTS
 dmy3gw1s2rgt        node-docker-test-swarm_web   replicated          5/5                 eraldoforgoli/node-docker-test:latest   *:8083->8000/tcp
