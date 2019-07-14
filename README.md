@@ -1,6 +1,5 @@
-
-### Getting started with docker
-Before applying the following steps, make sure you have docker installed in you machine/server.
+### Dockerizing a node.js app
+Before applying the following steps, make sure you have docker installed in you computer/server.
 
 #### Step 1: Clone repo
 ``` git clone https://github.com/eraldoforgoli/node-docker-test.git ```
@@ -68,7 +67,7 @@ Immediately restart containers if one fails.
 ```
 
 If you take a look at Dockerfile, you can see that i have EXPOSED port 8000, so i am mapping port 8083 to port 8000.
-Instruct web’s containers to share port 80 via a load-balanced network called webnet
+Instruct web’s containers to share port 8000 via a load-balanced network called webnet
 ```
     ports:
       - "8083:8000"
@@ -98,3 +97,9 @@ ID                  NAME                         MODE                REPLICAS   
 dmy3gw1s2rgt        node-docker-test-swarm_web   replicated          5/5                 eraldoforgoli/node-docker-test:latest   *:8083->8000/tcp
 
 ```
+### Check if your containers are up and running
+Don't wanste time opening your browser and typing http://localhost:8083, just *curl it*
+```
+curl http://localhost:8083
+```
+You should receive a "Hello World!" message.
